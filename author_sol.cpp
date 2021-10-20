@@ -17,11 +17,10 @@ int main() {
 		for (int i = 0; i < n; i++) {
 			double m, r, c;
 			cin >> m >> r >> c;
-			// calculate the total Rokdas using the current plan: 'r[i] * [u]'
+			// calculate the total Rokdas using the current plan: let x = 'r * u'
 			// at the end of every 'm' months, we need to pay the cost of the plan so,
-			// every month we need to pay: 'c / m' Rokdas (cost)
-			// to get the total Rokdas for a single month using the current plan:
-			// total Rokdas using the current plan in a single month plus cost of the plan in a single month
+			// every month we also need to pay: let y = 'c / m' Rokdas (cost)
+			// in total = x + y = (r * u) + (c / m) 
 			double current_plan = (c / m) + (r * u);
 			if (current_plan < best_plan) {
 				best_plan = current_plan;
